@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('../components/nav.css');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    background: rgba(179, 221, 255, 0.1);
+}
+
+body {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    margin-left: 15%;
+}
+
+main .header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 15px 0;
+}
+
+.header i {
+    display: none;
+    margin-left: 30px;
+}
+
+.header h3 {
+    width: 90%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 1280px) {
+    main {
+        margin-left: 0;
+    }
+
+    .header i {
+        display: block;
+    }
+
+    .expand {
+        width: 250px;
+        background: #fff;
+        z-index: 1;
+        transition: 0.5s ease;
+    }
+
+    .opaque {
+        opacity: 0.6;
+    }
+    
+}
+
+.main-landing {
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+}
+
+.landing {
+    height: 90vh;
+    padding: 30px;
+    overflow: auto;
+}
+
+.balance p {
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.balance span {
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.action {
+    margin: 50px 0 100px;
+}
+
+.cards {
+    display: flex;
+    align-content: center;
+}
+
+.cards .palette {
+    height: 200px;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    transition: transform 0.5s ease;
+}
+
+.cards .palette:hover {
+    transform: scale(1.02)
+}
+
+.cards .palette:nth-child(1) {
+    width: 30%;
+}
+
+.cards .palette:nth-child(2) {
+    width: 70%;
+}
+
+.palette .palette-head {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.palette .palette-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.palette-body h1 {
+    text-align: center;
+}
+.palette-body p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+.data {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.data .s-i-s {
+    width: 60%;
+    padding: 20px;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+}
+
+.data .s-i-s h4 {
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.data .s-i-s .align {
+    display: flex;
+    align-items: center;
+}
+
+.data .s-i-s .align div {
+    width: 50%;
+}
+
+.data .s-i-s footer a {
+    font-size: 12px;
+    margin: 10px;
+}
+
+.data .rate {
+    width: 35%;
+}
+
+.data .rate div {
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.data .rate div h4 {
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.data .rate div p {
+    margin: 20px;
+}
+
+.data .rate div span {
+    font-size: 13px;
+    margin: 0 20px;
+} 
+
+hr {
+    border: 1px solid #e4e4e4;
+}

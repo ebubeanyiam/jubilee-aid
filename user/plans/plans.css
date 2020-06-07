@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('../components/nav.css');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    background: rgba(179, 221, 255, 0.1);
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    margin-left: 15%;
+}
+
+main .header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 15px 0;
+}
+
+.header i {
+    display: none;
+    margin-left: 30px;
+}
+
+.header h3 {
+    width: 90%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 1280px) {
+    main {
+        margin-left: 0;
+    }
+
+    .header i {
+        display: block;
+    }
+
+    .expand {
+        width: 250px;
+        background: #fff;
+        z-index: 1;
+        transition: 0.5s ease;
+    }
+
+    .opaque {
+        opacity: 0.6;
+    }
+    
+}
+
+.main-landing {
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+}
+
+.landing {
+    height: 82vh;
+    padding: 30px;
+    overflow: auto;
+}
+
+.landing h4 {
+    margin: 0 0 10px;
+}
+
+hr {
+    border: 1px solid #e4e4e4;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.cards {
+    margin: 20px 0;
+    width: 50%;
+}
+
+.cards div {
+    height: 200px;
+    width: 60%;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    transition: transform 0.5s ease;
+}
+
+.cards div:hover {
+    transform: scale(1.02)
+}
+
+.cards div i,
+.cards div p {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.plan {
+    display: none;
+    width: 50%;
+}
+
+.confirm {
+    display: none;
+}
+
+.pending {
+    margin: 50px 0;
+}
+
+.pending div p {
+    margin: 20px 0;
+}
+
+.plan h4 {
+    margin-bottom: 20px;
+}
+
+form select {
+    padding: 10px;
+    width: 50%;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    font-family: 'Montserrat';
+}
+
+form p {
+    margin: 10px 0 20px;
+    font-size: 13px;
+}
+
+form input[type="submit"] {
+    padding: 10px;
+    background: #9494f8;
+    border: 1px solid #9494f8;
+    border-radius: 4px;
+    color: white;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    display: block;
+    margin: 10px 0;
+}
+
+.hide {
+    display: block;
+}
+.activate {
+    pointer-events: none;
+    opacity: .5;
+}

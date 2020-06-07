@@ -1,0 +1,110 @@
+.menu-bar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+.logo i {
+    display: none;
+}
+
+.nav-list {
+    width: 100%;
+    height: 70%;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.nav-items {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.name {
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+
+.nav-items a {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.nav-items a i {
+    width: 20%;
+}
+
+.nav-items a span {
+    width: 80%;
+}
+
+.nav-items .nav-links {
+    color: grey;
+}
+
+.nav-items form button {
+    background: none;
+    border: none;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    cursor: pointer;
+    font-size: 16px;
+    color: grey;
+}
+
+.nav-items form button i {
+    width: 20%;
+}
+
+.nav-items form button span {
+    width: 80px;
+}
+
+.nav-links i {
+    margin-right: 10px;
+}
+
+.menu-bar img {
+    width: 65px;
+    height: 50px;
+}
+
+@media screen and (max-width: 1280px) {
+    .menu-bar {
+        width: 0%;
+    }
+
+    .logo {
+        width: 100%;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo i {
+        font-size: 30px;
+        font-weight: 100;
+        display: block;
+    }
+}

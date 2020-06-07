@@ -1,0 +1,151 @@
+nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+  min-height: 10vh;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+.logo img {
+  width: 150px;
+  height: 100%;
+}
+
+.mobile-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.navigation {
+  margin-left: 50px;
+  flex-grow: 1;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-top: -3px;
+}
+
+.navLinks li {
+  padding: 0 10px;
+  margin: 0 5px;
+}
+
+.navLinks a {
+  font-size: 13px;
+  font-weight: bolder;
+  color: #6780a5;
+}
+
+nav .status {
+  margin-right: 15px;
+}
+
+nav .status button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background-color: #020237;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+nav .status .b1 {
+  background-color: #ffffff;
+  color: #020237;
+  border: 1px solid #020237;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 2px;
+  background: #020237;
+  margin: 5px;
+}
+
+@media screen and (max-width: 850px) {
+  .logo {
+    flex-grow: 1;
+  }
+
+  .mobile-nav {
+    width: 0;
+    background: #020237;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    flex-direction: column;
+    align-items: unset;
+    display: flex;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .mobile-nav .navLinks,
+  .mobile-nav .status {
+    display: none;
+  }
+
+  .mobile-open {
+    width: 100vw;
+    padding: 100px 50px 50px;
+  }
+
+  .mobile-open .navLinks,
+  .mobile-open .status {
+    display: flex;
+  }
+
+  .navigation {
+    margin-left: 0px;
+    flex-grow: unset;
+  }
+
+  .navigation .navLinks {
+    align-items: unset;
+    flex-direction: column;
+  }
+
+  .navigation .navLinks li {
+    padding: 0 10px;
+    margin: 10px 5px;
+  }
+
+  .navigation .navLinks li a {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #ffffff;
+  }
+
+  nav .status {
+    margin: 50px 0;
+  }
+
+  nav .status button {
+    margin-left: unset;
+    margin-right: 10px;
+  }
+
+  .hamburger {
+    display: block;
+    margin-right: 15px;
+    z-index: 1;
+  }
+
+  .mobile-click div {
+    background: white;
+  }
+}

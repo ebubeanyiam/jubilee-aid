@@ -1,0 +1,230 @@
+@import url("../components/routes/nav.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  height: 85vh;
+  position: relative;
+  background-color: #45abff1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing {
+  padding: 100px 0;
+}
+
+header .landing h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bolder;
+  margin: 20px;
+}
+
+@media screen and (max-width: 824px) {
+  header {
+    background-position: center;
+  }
+
+  header .head h1 {
+    font-size: 30px;
+  }
+}
+
+header .head input {
+  display: block;
+  padding: 15px;
+  width: 60%;
+  margin: auto;
+  border: 1px solid #45abff;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 770px) {
+  header .head input {
+    width: 350px;
+  }
+}
+
+header .head input::placeholder {
+  font-size: 18px;
+}
+
+.accordion-body {
+  display: flex;
+  padding: 30px 20px;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 980px) {
+  .accordion-body {
+    flex-direction: column;
+  }
+}
+
+.accHeader {
+  width: 25%;
+}
+
+.accHeader h1 {
+  font-size: 40px;
+  width: 50%;
+  font-weight: bolder;
+}
+
+.accQues {
+  width: 75%;
+}
+
+@media screen and (max-width: 980px) {
+  .accQues {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.collapsible {
+  background: none;
+  color: #45abff;
+  cursor: pointer;
+  padding: 30px 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ebebeb;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+}
+
+.content {
+  padding: 10px 0px;
+  display: none;
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible:after {
+  content: "\02795";
+  font-size: 15px;
+  color: black;
+  float: right;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 725px) {
+  .collapsible:after {
+    display: none;
+  }
+}
+
+.active:after {
+  content: "\2796";
+}
+
+#myFooter {
+  padding: 50px 0 0;
+}
+
+#myFooter .footer-copyright {
+  padding: 5px 0;
+}
+
+@media (max-width: 767px) {
+  #myFooter .footer-copyright {
+    margin-top: 10px;
+  }
+}
+
+#myFooter .footer-copyright p {
+  margin: 10px;
+  color: #0077e2;
+  text-align: center;
+}
+
+#myFooter ul {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 1.7;
+}
+
+#myFooter h5 {
+  font-size: 18px;
+  color: #45abff;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#myFooter a {
+  color: black;
+  text-decoration: none;
+}
+
+#myFooter a:hover,
+#myFooter a:focus {
+  text-decoration: none;
+  color: #f4511e;
+}
+
+#myFooter .social-networks {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 16px;
+}
+
+#myFooter .social-networks a {
+  font-size: 30px;
+  color: #45abff;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+#myFooter .social-networks a:hover {
+  text-decoration: none;
+}
+
+#myFooter .facebook:hover {
+  color: #0077e2;
+}
+
+#myFooter .google:hover {
+  color: #ef1a1a;
+}
+
+#myFooter .twitter:hover {
+  color: #00aced;
+}
+
+#myFooter .instagram:hover {
+  color: #d40ed4;
+}
+
+#myFooter .linkedin:hover {
+  color: #5ca0b9;
+}
+
+@media screen and (max-width: 767px) {
+  #myFooter {
+    text-align: center;
+  }
+}
