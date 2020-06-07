@@ -1,4 +1,5 @@
 @import url("../components/routes/nav.css");
+@import url("../components/routes/footer.css");
 
 * {
   margin: 0;
@@ -91,89 +92,33 @@ header .landing p {
   text-align: justify;
 }
 
-#myFooter {
-  padding: 50px 0 0;
+.rotate-screen {
+  display: none;
 }
 
-#myFooter .footer-copyright {
-  padding: 5px 0;
-}
+@media screen and (max-width: 780px) {
+  .root {
+    display: none;
+  }
 
-@media (max-width: 767px) {
-  #myFooter .footer-copyright {
-    margin-top: 10px;
+  .rotate-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .rotate-screen h1 {
+    font-size: 15px;
   }
 }
 
-#myFooter .footer-copyright p {
-  margin: 10px;
-  color: #0077e2;
-  text-align: center;
-}
+@media screen and (max-width: 575px) {
+  .root {
+    display: initial;
+  }
 
-#myFooter ul {
-  list-style-type: none;
-  padding-left: 0;
-  line-height: 1.7;
-}
-
-#myFooter h5 {
-  font-size: 18px;
-  color: #45abff;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-#myFooter a {
-  color: black;
-  text-decoration: none;
-}
-
-#myFooter a:hover,
-#myFooter a:focus {
-  text-decoration: none;
-  color: #f4511e;
-}
-
-#myFooter .social-networks {
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 16px;
-}
-
-#myFooter .social-networks a {
-  font-size: 30px;
-  color: #45abff;
-  padding: 10px;
-  transition: 0.2s;
-}
-
-#myFooter .social-networks a:hover {
-  text-decoration: none;
-}
-
-#myFooter .facebook:hover {
-  color: #0077e2;
-}
-
-#myFooter .google:hover {
-  color: #ef1a1a;
-}
-
-#myFooter .twitter:hover {
-  color: #00aced;
-}
-
-#myFooter .instagram:hover {
-  color: #d40ed4;
-}
-
-#myFooter .linkedin:hover {
-  color: #5ca0b9;
-}
-
-@media screen and (max-width: 767px) {
-  #myFooter {
-    text-align: center;
+  .rotate-screen {
+    display: none;
   }
 }

@@ -417,6 +417,10 @@ main .hero-image img {
     align-items: center;
     height: 100vh;
   }
+
+  .rotate-screen h1 {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -473,21 +477,42 @@ main .hero-image img {
     height: 283px;
   }
 
+  .content-header h1 {
+    font-size: 20px;
+  }
+
+  .content-list .list p {
+    padding: 0px 25px;
+  }
+
+  .content-list .l1 h3::before,
+  .content-list .l2 h3::before,
+  .content-list .l3 h3::before {
+    margin-right: 15px;
+  }
+
   .invest-future {
-    min-height: 500px;
+    min-height: 450px;
     padding: 20px 20px;
     margin-bottom: 20px;
     align-items: unset;
-    background-image: url("./assets/images/plant-future.png");
+    background: #f4f8fc;
   }
 
   .invest-future .hero-img {
     display: none;
   }
 
+  .invest-future .invest-future-content {
+    width: 100%;
+  }
+
   .invest-future .invest-future-content h1,
   .invest-future .invest-future-content p {
     width: 100%;
-    background-color: #ffffff73;
+  }
+
+  .testimonial .testimony h1 {
+    font-size: 20px;
   }
 }

@@ -8,6 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 
   <title>Jubilee aid | FAQ</title>
@@ -16,7 +17,8 @@
 
 
 <body>
-  <header>
+<div class="root">
+    <header>
     <?php
         require "..//components/routes/nav.php" ;
     ?>
@@ -35,7 +37,6 @@
     <div class="accQues">
 
       <div class="collapsible">What is Jubilee Aid?</div>
-
       <div class="content">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae non eveniet rem. Magnam explicabo
           illo ullam! Necessitatibus tempore enim delectus, sit praesentium porro, doloribus ratione illo
@@ -170,55 +171,22 @@
     </div>
   </div>
 
-  <footer id="myFooter">
-    <div class="container">
+  <?php
+      require "../components/routes/footer.php" ;
+  ?>
 
-      <div class="col-sm-2">
-        <h5>Get started</h5>
-        <ul>
-          <li><a href="../../index.php">Home</a></li>
-          <li><a href="../login/login.php">Login</a></li>
-          <li><a href="../register/register.php">Sign Up</a></li>
-          <li><a href="#">Report</a></li>
-        </ul>
-      </div>
+  <div class="social">
+    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  </div>
+</div>
 
-      <div class="col-sm-2">
-        <h5>About us</h5>
-        <ul>
-          <li><a href="../../index.php #contact">Contact us</a></li>
-          <li><a href="#">Reviews</a></li>
-        </ul>
-      </div>
-
-      <div class="col-sm-2">
-        <h5>Support</h5>
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="">support@jubileeaid.com</a></p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="col-sm-2.5">
-        <div class="social-networks">
-          <h3>Connect</h3>
-          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-          <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
-          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-copyright">
-      <p>© <?php echo date("Y");?> JUBILEE AID</p>
-    </div>
-
-  </footer>
-
+<div class="rotate-screen">
+  <h1>Please switch your screen back to portrait mode</h1>
+</div>
 
 
   <script src="../../app.js"></script>

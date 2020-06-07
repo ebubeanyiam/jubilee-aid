@@ -1,6 +1,6 @@
 <footer>
     <div class="footer-logo">
-        <a href="./"><img src="./assets/images/logo.png" alt="jubilee aid logo"></a>
+        <a href="./"><img src="../../assets/images/logo.png" alt="jubilee aid logo"></a>
     </div>
 
     <div class="footer-landing">
