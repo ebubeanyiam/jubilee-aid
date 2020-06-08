@@ -1,101 +1,95 @@
-var email = document.querySelector('#email');
-        var password = document.querySelector('#password');
-        var rptpassword = document.querySelector('#rpt-password');
-        var number = document.querySelector('#num');
-        var check = document.querySelector('.fa-eye');
-        var mlwang = document.querySelector('.mlwang');
-        var pwdwang = document.querySelector('.pwdwang');
-        var rptpwdwang = document.querySelector('.rpt-pwdwang');
-        var numwang = document.querySelector('.numwang');
-        
-        email.addEventListener('keyup', function() {
-            var emValue = document.querySelector('#email').value;
+const firstName = document.querySelector("#firstname");
 
-            if(!emValue.includes("@") && !emValue.includes(".")) {
-                mlwang.style.display = "block";
-            }
-            else if(emValue.includes("@") && emValue.includes(".")) {
-                mlwang.style.display = "none";
-            }
-        });
+const email = document.querySelector("#email");
+const mailWarning = document.querySelector(".mail-warning");
 
-        password.addEventListener("keyup", function() {
-            var pwdValue = document.querySelector('#password').value;
-            var button = document.querySelector('#reg');
+const password = document.querySelector("#password");
+const repeatPassword = document.querySelector("#rpt-password");
+const passwordWarning = document.querySelector(".password-warning");
+const repeatPasswordWarning = document.querySelector(".rpt-pwdwang");
 
-            if (pwdValue.length < 8) {
-                button.style.pointerEvents = "none";
-                button.style.backgroundColor = "#f4501eb9"
-                pwdwang.style.display = "block";
-            }
-            else {
-                button.style.backgroundColor = "#f4511e";
-                button.style.pointerEvents = "all";
-                button.style.cursor = "pointer";
-                pwdwang.style.display = "none";
-            }
-        });
+const number = document.querySelector("#num");
+const numberWarning = document.querySelector(".num-warning");
 
-        rptpassword.addEventListener("keyup", () => {
-            var pwdValue = document.querySelector('#password').value;
-            var rptpwdValue = document.querySelector('#rpt-password').value;
-            var button = document.querySelector('#reg');
+const check = document.querySelector(".fa-eye");
 
-            if (pwdValue !== rptpwdValue) {
-                button.style.pointerEvents = "none";
-                button.style.backgroundColor = "#f4501eb9"
-                rptpwdwang.style.display = "block";
-            }
-            else if (pwdValue === rptpwdValue) {
-                button.style.backgroundColor = "#f4511e";
-                button.style.pointerEvents = "all";
-                button.style.cursor = "pointer";
-                rptpwdwang.style.display = "none";
-            }
-        })
+email.addEventListener("keyup", function () {
+  var emailValue = email.value;
 
-        number.addEventListener("keyup", () => {
-            const numValue = document.querySelector('#num').value;
-            const alphaCheck = numValue.search(/[a-z]/i);
-            var button = document.querySelector('#reg');
+  if (!emailValue.includes("@") && !emValue.includes(".")) {
+    mailWarning.style.display = "block";
+  } else if (emValue.includes("@") && emValue.includes(".")) {
+    mailWarning.style.display = "none";
+  }
+});
 
-            if (numValue.length < 10 || numValue.length > 11) {
-                numwang.style.display = "block";
-                button.style.pointerEvents = "none";
-                button.style.backgroundColor = "#f4501eb9"
-            }
-            else if (alphaCheck != -1) {
-                numwang.style.display = "block";
-                button.style.pointerEvents = "none";
-                button.style.backgroundColor = "#f4501eb9"
-            }
-            else if (numValue.startsWith("0") && numValue.length < 11) {
-                numwang.style.display = "block";
-                button.style.pointerEvents = "none";
-                button.style.backgroundColor = "#f4501eb9"
-            }
-            else if (!numValue.startsWith("0") && numValue.length > 10) {
-                numwang.style.display = "block";
-                button.style.pointerEvents = "none";
-                button.style.backgroundColor = "#f4501eb9"
-            }
-            else {
-                button.style.backgroundColor = "#f4511e";
-                button.style.pointerEvents = "all";
-                button.style.cursor = "pointer";
-                numwang.style.display = "none";
-            }
-        });
+firstName.addEventListener("keyup", () => {
+  document.querySelector(".welcome-message h4 span").innerText =
+    firstName.value;
+});
 
-        check.addEventListener("click", function() {
-            password.style.border = "none";
-            password.style.borderBottom = "1px solid #f4511e";
+password.addEventListener("keyup", function () {
+  const passwordValue = password.value;
+  const button = document.querySelector("#reg");
 
-            if (password.type === "password" && password.value !== "") {
-                password.type = "text";
-                check.classList.add("check")
-            } else {
-                password.type = "password"; 
-                check.classList.remove("check")
-            }
-        });
+  if (passwordValue.length < 8) {
+    button.style.pointerEvents = "none";
+    passwordWarning.style.display = "block";
+  } else {
+    button.style.pointerEvents = "all";
+    button.style.cursor = "pointer";
+    passwordWarning.style.display = "none";
+  }
+});
+
+repeatPassword.addEventListener("keyup", () => {
+  const passwordValue = password.value;
+  const repeatPasswordValue = repeatPassword.value;
+  const button = document.querySelector("#reg");
+
+  if (passwordValue !== repeatPasswordValue) {
+    button.style.pointerEvents = "none";
+    repeatPasswordWarning.style.display = "block";
+  } else if (passwordValue === repeatPasswordValue) {
+    button.style.pointerEvents = "all";
+    button.style.cursor = "pointer";
+    repeatPasswordWarning.style.display = "none";
+  }
+});
+
+number.addEventListener("keyup", () => {
+  const numValue = document.querySelector("#num").value;
+  const alphaCheck = numValue.search(/[a-z]/i);
+  const button = document.querySelector("#reg");
+
+  if (numValue.length < 10 || numValue.length > 11) {
+    numberWarning.style.display = "block";
+    button.style.pointerEvents = "none";
+  } else if (alphaCheck != -1) {
+    numberWarning.style.display = "block";
+    button.style.pointerEvents = "none";
+  } else if (numValue.startsWith("0") && numValue.length < 11) {
+    numberWarning.style.display = "block";
+    button.style.pointerEvents = "none";
+  } else if (!numValue.startsWith("0") && numValue.length > 10) {
+    numberWarning.style.display = "block";
+    button.style.pointerEvents = "none";
+  } else {
+    button.style.pointerEvents = "all";
+    button.style.cursor = "pointer";
+    numberWarning.style.display = "none";
+  }
+});
+
+check.addEventListener("click", function () {
+  password.style.border = "none";
+  password.style.borderBottom = "1px solid #062863";
+
+  if (password.type === "password" && password.value !== "") {
+    password.type = "text";
+    check.classList.add("check");
+  } else {
+    password.type = "password";
+    check.classList.remove("check");
+  }
+});
