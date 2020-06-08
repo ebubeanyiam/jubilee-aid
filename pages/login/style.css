@@ -1,269 +1,238 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  background: #062863;
 }
 
-.lLogo {
-    margin: 25px 20px;
-    padding: 50px;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.lLogo img {
-    width: 65px;
-    height: 50px;
+.logo-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
 }
 
-.lMain {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px 20px 20px;
+.logo-container img {
+  width: 150px;
 }
 
-.lMainText {
-    width: 50%;
-    padding: 0 50px;
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
 }
 
-.lMainText h2 {
-    font-size: 45px;
-    margin-bottom: 30px;
-    font-weight: bolder;
-    background: linear-gradient(to right, black, #a9a9c0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+form {
+  background: white;
+  padding: 50px 20px 30px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f4501e2c;
+  width: 450px;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
 }
 
-.lMainText h4 {
-    font-size: 30px;
-    color: #00000079;
-    word-spacing: 3px;
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.lForm {
-    width: 50%;
+.welcome-message h3,
+.welcome-message p {
+  margin-bottom: 10px;
 }
 
-.lForm form {
-    background: white;
-    padding: 30px 20px;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, .1);
-    border-radius: 4px;
-    border: 1px solid #f4501e2c;
+.welcome-message h3 {
+  color: #06286398;
 }
 
-.lForm form input {
-    display: block;
-    padding: 20px 25px 20px 20px;
-    width: 90%;
-    border-radius: 4px;
-    margin: auto;
-    font-size: 15px;
-    border: 1px solid #aaa;
-    outline: none;
+.welcome-message p {
+  font-size: 12px;
 }
 
-.lForm form input:focus {
-    border: none;
-    border-bottom: 1px solid #f4511e;
+form input {
+  display: block;
+  padding: 20px 25px 20px 20px;
+  width: 90%;
+  border-radius: 4px;
+  margin: auto;
+  font-size: 12px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  background: #f4f8fc;
+  border: none;
+  outline: none;
+  margin-top: 30px;
 }
 
-.lForm form input::placeholder {
-    font-family: 'Montserrat', sans-serif;
+form input:focus {
+  border: none;
+  border-bottom: 1px solid #062863;
 }
 
-.lForm form .password {
-    display: flex;
-    align-items: center;
-    margin: 30px auto 0px;
-    width: 90%;
-    position: relative;
+form input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
 }
 
-.lForm form .password input {
-    width: 100%;
+form .password {
+  display: flex;
+  align-items: center;
+  margin: 0px auto;
+  width: 90%;
+  position: relative;
 }
 
-.lForm form .password i {
-    position: absolute;
-    right: 8px;
-    color: #aaa;
-    cursor: pointer;
+form .password input {
+  width: 100%;
 }
 
-.check {
-    color: #f4511e !important;
+form .password i {
+  position: absolute;
+  top: 50px;
+  right: 8px;
+  color: #aaa;
+  cursor: pointer;
 }
 
-.lForm form .forgot {
-    display: block;
-    width: 90%;
-    margin: 20px auto 0;
-    font-size: 13px;
-    color: #f4511e;
-    text-decoration: none;
-    font-weight: bolder;
+form .password .check {
+  color: #062863;
 }
 
-.lForm form .frmFtr {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    margin: 50px auto 10px;
+.form-container form .forgot {
+  display: block;
+  width: 90%;
+  margin: 20px auto 0;
+  font-size: 13px;
+  color: #062863;
+  font-weight: bolder;
 }
 
-.lForm form button {
-    padding: 15px;
-    margin: 0;
-    width: 20%;
-    background: #f4501eb9;
-    border: none;
-    color: white;
-    font-weight: bolder;
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 6px;
-    pointer-events: none;
+.form-container form .frmFtr {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 50px auto 10px;
 }
 
-.lForm form .frmFtr p {
-    font-size: 13px;
-    color: #aaa;
+.form-container form button {
+  padding: 15px;
+  margin: 20px auto 10px;
+  width: 200px;
+  background: #062863;
+  border: none;
+  color: #ffffff;
+  font-weight: bolder;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 6px;
+  pointer-events: none;
 }
 
-.lForm form .frmFtr p a {
-    text-decoration: none;
-    color: #f4511e;
-    font-weight: bolder;
+.form-container form .frmFtr p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.form-container form .frmFtr p a {
+  text-decoration: none;
+  color: #062863;
+  font-weight: bolder;
 }
 
 .mlwang,
 .pwdwang {
-    display: block;
-    font-size: 12px;
-    color: #f4511e;
-    width: 90%;
-    margin: 10px auto 0;
-    display: none;
+  display: block;
+  font-size: 12px;
+  color: #062863;
+  width: 90%;
+  margin: 10px auto 0;
+  display: none;
 }
 
 .ftr {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 30px 0;
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
 }
 
 .cts p {
-    font-size: 13px;
-    color: #aaa;
+  font-size: 13px;
+  color: #aaa;
 }
 
 .cts p a {
-    text-decoration: none;
-    color: #f4511e;
-    font-weight: bolder;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bolder;
 }
 
 .pt span {
-    font-size: 13px;
-    color: #aaa;
-    font-weight: bolder;
-    padding-left: 5px;
+  font-size: 13px;
+  color: #aaa;
+  font-weight: bolder;
+  padding-left: 5px;
 }
 
-.pt span:first-child {
-    display: inline-block;
-    border-right: 2px solid #aaa;
-    padding-right: 10px;
+.pt a:first-child {
+  display: inline-block;
+  border-right: 2px solid #aaa;
+  padding-right: 10px;
 }
 
-@media screen and (max-width: 1000px) {
-    .lLogo {
-        padding: 20px;
-    }
-
-    .lMain {
-        flex-direction: column;
-    }
-
-    .lMainText,
-    .lForm {
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .lForm {
-        margin-top: 50px;
-    }
+.rotate-screen {
+  display: none;
 }
 
-@media screen and (max-width: 620px) {
-    .lLogo {
-        margin: 20px 20px;
-        padding: 0px;
-    }
+@media screen and (max-width: 780px) {
+  .root {
+    display: none;
+  }
 
-    .lMain {
-        padding: 0px 20px;
-        margin-top: 60px;
-    }
+  .rotate-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
 
-    .lMainText,
-    .lForm {
-        width: 100%;
-        padding: 0 0px;
-    }
+  .rotate-screen h1 {
+    font-size: 15px;
+    color: #ffffff;
+  }
+}
 
-    .lMainText h2 {
-        font-size: 30px;
-        margin-bottom: 10px;
-    }
+@media screen and (max-width: 575px) {
+  .root {
+    display: initial;
+  }
 
-    .lMainText h4 {
-        font-size: 20px;
-    }
+  .rotate-screen {
+    display: none;
+  }
 
-    .lForm {
-        margin-top: 20px;
-    }
+  form {
+    width: 93%;
+  }
 
-    .lForm form input {
-        width: 100%;
-    }
+  .ftr {
+    flex-direction: column;
+    justify-content: unset;
+    align-items: unset;
+    width: 93%;
+  }
 
-    .lForm form .password {
-        width: 100%;
-    }
-
-    .frmFtr {
-        flex-direction: column;
-    }
-
-    .frmFtr p {
-        width: 100%;
-    }
-
-    .lForm form button {
-        width: 150px;
-        margin-top: 20px;
-    }
-
-    .ftr {
-        flex-direction: column;
-    }
-
-    .cts,
-    .pt {
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .pt span:first-child {
-        padding-left: 0;
-    }
+  .cts {
+    margin-bottom: 15px;
+  }
 }

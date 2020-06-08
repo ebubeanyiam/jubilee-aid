@@ -16,7 +16,7 @@
   <body>
       <div class="root">
           <div class="logo-container">
-              <a href="../../index.php"><img src="../../assets/images/logo-white.png" alt=""></a>
+              <a href="../../"><img src="../../assets/images/logo-white.png" alt=""></a>
           </div>
 
           <div class="form-container">
@@ -53,7 +53,7 @@
                   <span class="rpt-pwdwang">Passwords do not match </span>
 
                   <span class="frmFtr">
-                      <p>Got an account? <a href="../login/login.php">Sign In</a></p>
+                      <p>Got an account? <a href="../login/">Sign In</a></p>
                       <button type="submit" id="reg" name="signup">Register</button>
                   </span>
 
