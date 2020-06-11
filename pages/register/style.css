@@ -232,9 +232,10 @@ form .frmFtr p a {
     align-items: unset;
     justify-content: unset;
   }
-  
+
   form button {
     margin: 15px auto;
+    width: 200px;
   }
 
   .ftr {
@@ -247,5 +248,4 @@ form .frmFtr p a {
   .cts {
     margin-bottom: 15px;
   }
-}
 }

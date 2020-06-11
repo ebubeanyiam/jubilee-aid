@@ -1,25 +1,25 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="style.css">
     <title>Account</title>
 </head>
 
 <body>
 
-<?php
-if (!isset($_SESSION['userId'])) {
-    require "../components/accerr.php" ;
-}
-else {
-    echo '  
-    <nav class="menu-bar"> ' ;
-        require "../components/nav.php" ;
-    echo '
+    <?php
+    if (!isset($_SESSION['userId'])) {
+        header("Location: ../../pages/login/");
+    } else {
+        echo '  
+    <nav class="menu-bar"> ';
+        require "../components/nav.php";
+        echo '
     </nav>
 
     <main>
@@ -97,11 +97,12 @@ else {
         </div>
     </main> 
 
-    <script src="../components/app.js"></script> ' ;
-}
+    <script src="../components/app.js"></script> ';
+    }
 
-?>
+    ?>
 
 
 </body>
+
 </html>

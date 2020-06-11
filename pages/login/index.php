@@ -32,10 +32,9 @@
                 <span class="mlwang">Please input a valid Email</span>
 
                 <span class="password">
-                    <input type="password" name="pwd" id="password" placeholder="Password" required>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
                     <i class="fa fa-eye"></i>
                 </span>
-                <span class="pwdwang">Password must be up to 8 characters</span>
 
                 <a href="" class="forgot">Forgot Password?</a>
 

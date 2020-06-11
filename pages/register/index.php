@@ -34,7 +34,7 @@
                   </div>
 
                   <div class="number">
-                      <input type="text" name="number" id="num" placeholder="Phone Number" required>
+                      <input type="text" name="phonenumber" id="num" placeholder="Phone Number" required>
                   </div>
                   <span class="num-warning">Input a valid Phone Number</span>
 
