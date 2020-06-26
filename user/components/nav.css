@@ -36,19 +36,20 @@
 
 .name {
   display: flex;
-  width: 50%;
-  margin: auto;
+  width: 100%;
 }
 
 .nav-items a {
-  width: 50%;
+  width: 100%;
   margin: auto;
   display: flex;
   align-items: center;
 }
 
 .nav-items a i {
-  width: 20%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .nav-items a span {
@@ -59,17 +60,21 @@
   color: grey;
 }
 
+.name a {
+  width: 50%;
+}
+
 .nav-items form button {
   background: none;
   border: none;
   padding: 10px 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 50%;
   margin: auto;
   cursor: pointer;
-  font-size: 16px;
-  color: grey;
+  color: #808080;
   font-family: "Montserrat";
 }
 
@@ -91,21 +96,35 @@
 }
 
 @media screen and (max-width: 1280px) {
+  .logo {
+    width: 100%;
+  }
+
+  .logo i {
+    display: block;
+  }
+
   .menu-bar {
     width: 0%;
   }
 
-  .logo {
-    width: 100%;
-    padding: 0 30px;
+  .name {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    width: 100%;
   }
 
-  .logo i {
-    font-size: 30px;
-    font-weight: 100;
-    display: block;
+  .nav-items a i {
+    width: 10%;
+    justify-content: flex-start;
+  }
+
+  .name a {
+    width: 100%;
+  }
+
+  .nav-items form button {
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 5px;
   }
 }

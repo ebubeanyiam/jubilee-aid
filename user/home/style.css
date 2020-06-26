@@ -23,12 +23,6 @@ a {
   text-decoration: none;
 }
 
-.open-nav {
-  width: 300px;
-  background: #ffffff;
-  z-index: 1;
-}
-
 main {
   margin-left: 15%;
 }
@@ -81,6 +75,12 @@ main .header {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 600px) {
+  .main-landing {
+    padding: 20px 10px;
+  }
+}
+
 .landing {
   height: 90vh;
   padding: 30px;
@@ -112,6 +112,12 @@ main .header {
   align-content: center;
 }
 
+@media screen and (max-width: 830px) {
+  .cards {
+    flex-direction: column;
+  }
+}
+
 .cards div {
   height: 250px;
   width: 30%;
@@ -123,6 +129,13 @@ main .header {
   justify-content: flex-end;
   padding: 0 20px;
   transition: transform 0.5s ease;
+}
+
+@media screen and (max-width: 830px) {
+  .cards div {
+    width: 300px;
+    margin-top: 20px;
+  }
 }
 
 .cards div:hover {
@@ -149,11 +162,24 @@ main .header {
   align-items: flex-start;
 }
 
+@media screen and (max-width: 830px) {
+  .data {
+    flex-direction: column;
+  }
+}
+
 .data .s-i-s {
   width: 60%;
   padding: 20px;
   border: 1px solid #e4e4e4;
   border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 830px) {
+  .data .s-i-s {
+    width: 100%;
+  }
 }
 
 .data .s-i-s h4 {
@@ -179,6 +205,12 @@ main .header {
   width: 35%;
 }
 
+@media screen and (max-width: 830px) {
+  .data .rate {
+    width: 70%;
+  }
+}
+
 .data .rate div {
   border: 1px solid #e4e4e4;
   border-radius: 4px;
@@ -202,4 +234,13 @@ main .header {
 
 hr {
   border: 1px solid #e4e4e4;
+}
+
+@media screen and (max-width: 1280px) {
+  .open-nav {
+    width: 300px;
+    background: #ffffff;
+    z-index: 1;
+    padding: 20px;
+  }
 }

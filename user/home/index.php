@@ -24,9 +24,8 @@
 
     <main>
         <div class="header">
-            <i class="fa fa-bars" style="font-size: 20px; cursor: pointer;"></i>
+            <span><i class="fa fa-bars" style="font-size: 20px; cursor: pointer;"></i></span>
             <h3>Account Overview</h3>
-            <a href="../profile/profile.php"><img src="../../images/user.svg" alt="" width="50" height="50"></a>
         </div>
 
         <div class="main-landing">

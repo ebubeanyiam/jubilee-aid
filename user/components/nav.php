@@ -1,11 +1,11 @@
 <div class="logo">
     <!-- <a href="../../index.php"><img src="../../assets/images/logo.png" alt=""></a> -->
-    <!-- <i class="fa fa-times" style="font-size: 20px; cursor: pointer;"></i> -->
+    <i class="fa fa-times" style="font-size: 20px; cursor: pointer;"></i>
 </div>
 
 <ul class="nav-list">
     <li class="nav-items">
-        <section class="name"><span>Hi</span><a href="../profile/profile.php" class="nav-links">
+        <section class="name"><a href="../profile/profile.php" class="nav-links">
                 <?php echo $_SESSION["firstname"]; ?></a></section>
     </li>
     <li class="nav-items">

@@ -1,8 +1,13 @@
 const menuBar = document.querySelector(".menu-bar");
-const Bars = document.querySelector(".fa-bars");
+const Bars = document.querySelector(".header span");
+const closeMenu = document.querySelector(".fa-times");
 
 Bars.addEventListener("click", () => {
   menuBar.classList.toggle("open-nav");
+});
+
+closeMenu.addEventListener("click", () => {
+  menuBar.classList.remove("open-nav");
 });
 
 // Close nav
@@ -15,3 +20,5 @@ window.addEventListener("click", (e) => {
     menuBar.classList.remove("open-nav");
   }
 });
+
+console.log("hey");
