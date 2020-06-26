@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #062863;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.logo-container img {
+  width: 150px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+form {
+  background: white;
+  padding: 50px 20px 30px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f4501e2c;
+  width: 450px;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
+}
+
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-message h3,
+.welcome-message p {
+  margin-bottom: 10px;
+}
+
+.welcome-message h3 {
+  color: #06286398;
+}
+
+.welcome-message p {
+  font-size: 12px;
+}
+
+form input {
+  display: block;
+  padding: 20px 25px 20px 20px;
+  width: 90%;
+  border-radius: 4px;
+  margin: auto;
+  font-size: 12px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  background: #f4f8fc;
+  border: none;
+  outline: none;
+  margin-top: 30px;
+}
+
+form input:focus {
+  border: none;
+  border-bottom: 1px solid #062863;
+}
+
+form input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+
+form .password {
+  display: flex;
+  align-items: center;
+  margin: 0px auto;
+  width: 90%;
+  position: relative;
+}
+
+form .password input {
+  width: 100%;
+}
+
+form .password i {
+  position: absolute;
+  top: 50px;
+  right: 8px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+form .password .check {
+  color: #062863;
+}
+
+.form-container form .forgot {
+  display: block;
+  width: 90%;
+  margin: 20px auto 0;
+  font-size: 13px;
+  color: #062863;
+  font-weight: bolder;
+}
+
+.form-container form .frmFtr {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 50px auto 10px;
+}
+
+.form-container form button {
+  padding: 15px;
+  margin: 20px auto 10px;
+  width: 200px;
+  background: #062863;
+  border: none;
+  color: #ffffff;
+  font-weight: bolder;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.form-container form .frmFtr p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.form-container form .frmFtr p a {
+  text-decoration: none;
+  color: #062863;
+  font-weight: bolder;
+}
+
+.mlwang,
+.pwdwang {
+  display: block;
+  font-size: 12px;
+  color: #062863;
+  width: 90%;
+  margin: 10px auto 0;
+  display: none;
+}
+
+.ftr {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.cts p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.cts p a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bolder;
+}
+
+.pt span {
+  font-size: 13px;
+  color: #aaa;
+  font-weight: bolder;
+  padding-left: 5px;
+}
+
+.pt a:first-child {
+  display: inline-block;
+  border-right: 2px solid #aaa;
+  padding-right: 10px;
+}
+
+.rotate-screen {
+  display: none;
+}
+
+@media screen and (max-width: 780px) {
+  .root {
+    display: none;
+  }
+
+  .rotate-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .rotate-screen h1 {
+    font-size: 15px;
+    color: #ffffff;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .root {
+    display: initial;
+  }
+
+  .rotate-screen {
+    display: none;
+  }
+
+  form {
+    width: 93%;
+  }
+
+  .ftr {
+    flex-direction: column;
+    justify-content: unset;
+    align-items: unset;
+    width: 93%;
+  }
+
+  .cts {
+    margin-bottom: 15px;
+  }
+}

@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,18 +12,16 @@
 
 <body>
 
-<?php
-if (!isset($_SESSION['userId'])) {
-    header ("Location: ../../user/home/home.php") ;
-}
-else if (!isset($_SESSION['admin'])) {
-    header ("Location: ../../user/home/home.php") ;
-}
-else {
-    echo '  
-    <nav class="menu-bar"> ' ; 
-    require "../components/nav.php";
-    echo '
+    <?php
+    if (!isset($_SESSION['adminId'])) {
+        header("Location: ./login");
+    } else if (!isset($_SESSION['admin'])) {
+        header("Location: ../../user/home/home.php");
+    } else {
+        echo '  
+    <nav class="menu-bar"> ';
+        require "../components/nav.php";
+        echo '
     </nav>
 
     <main>
@@ -35,9 +34,11 @@ else {
         <div class="main-landing">
             <div  class="landing">
                 <div class="balance">
-                    <p>Welcome '; echo $_SESSION["name"] ; echo '</p>
+                    <p>Welcome ';
+        echo $_SESSION["name"];
+        echo '</p>
                     <span class="naira">You\'re logged in as an admin. Want to log in to your user account
-                    instaed? <a href=" ../../pages/login/login.php">Click here</a></span>
+                    instead? <a href=" ../../pages/login/login.php">Click here</a></span>
                 </div>
 
                 <div class="action">
@@ -57,11 +58,12 @@ else {
         </div>
     </main> 
 
-    <script src="../components/app.js"></script> ' ;
-}
+    <script src="../components/app.js"></script> ';
+    }
 
-?>
+    ?>
 
 
 </body>
+
 </html>

@@ -13,22 +13,22 @@ if (isset($_POST['submit'])) {
     }
 
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $userpassword = mysqli_real_escape_string($conn, $_POST['password']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-    $sql = "SELECT * FROM users WHERE email='$email'";
+    $sql = "SELECT * FROM Admins WHERE email='$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
 
         while ($row = $result->fetch_assoc()) {
-            if ($userpassword == $row['userpassword']) {
+            if ($password == $row['userpassword'] && $row['isAdmin'] == "Yes") {
                 session_start();
-                $_SESSION["userId"] = $row["userId"];
+                $_SESSION["adminId"] = $row["adminId"];
                 $_SESSION["firstname"] = $row["firstname"];
                 $_SESSION["lastname"] = $row["lastname"];
                 $_SESSION["email"] = $row["email"];
-                $_SESSION["number"] = $row["phonenumber"];
-                header("Location: ../../user/home/?login=success");
+                $_SESSION["number"] = $row["number"];
+                header("Location: ../?login=success");
 
                 exit();
             } else {
