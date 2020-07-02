@@ -1,14 +1,24 @@
-const bar = document.querySelector(".fa-bars");
-const times = document.querySelector(".fa-times");
-const nav = document.querySelector(".menu-bar");
-const main = document.querySelector("main");
+const menuBar = document.querySelector(".menu-bar");
+const Bars = document.querySelector(".header span");
+const closeMenu = document.querySelector(".fa-times");
 
-bar.addEventListener('click', function() {
-    nav.classList.toggle("expand");
-    main.classList.toggle("opaque");
+Bars.addEventListener("click", () => {
+  menuBar.classList.toggle("open-nav");
 });
 
-times.addEventListener('click', function() {
-    nav.classList.remove("expand")
-    main.classList.toggle("opaque");
+closeMenu.addEventListener("click", () => {
+  menuBar.classList.remove("open-nav");
 });
+
+// Close nav
+window.addEventListener("click", (e) => {
+  if (
+    // !document.querySelector(".hamburger-toggle").contains(e.target)
+    !menuBar.contains(e.target) &&
+    !Bars.contains(e.target)
+  ) {
+    menuBar.classList.remove("open-nav");
+  }
+});
+
+console.log("hey");

@@ -24,11 +24,11 @@
             <form action="<?php echo htmlspecialchars("../components/log.inc.php"); ?>" method="POST">
 
                 <div class="welcome-message">
-                    <h3>Login to your account</h3>
+                    <h3>Welcome Admin</h3>
                     <p>Securely login to your Jubilee aid</p>
                 </div>
 
-                <input type="email" name="email" id="email" placeholder="Email address" required>
+                <input type="text" name="username" id="username" placeholder="Username" required>
                 <span class="mlwang">Please input a valid Email</span>
 
                 <span class="password">
@@ -39,7 +39,7 @@
                 <a href="" class="forgot">Forgot Password?</a>
 
                 <span class="frmFtr">
-                    <p>New User? <a href="../register/">Create account</a></p>
+                    <!-- <p>New User? <a href="../register/">Create account</a></p> -->
                     <button type="submit" id="signIn" name="submit">Sign In</button>
                 </span>
             </form>

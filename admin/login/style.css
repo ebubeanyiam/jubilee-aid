@@ -134,7 +134,7 @@ form .password .check {
   font-weight: bolder;
   font-family: "Montserrat", sans-serif;
   border-radius: 6px;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 .form-container form .frmFtr p {
