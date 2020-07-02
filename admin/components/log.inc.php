@@ -2,8 +2,8 @@
 if (isset($_POST['submit'])) {
 
     $servername = "localhost";
-    $username = "anyiamebube";
-    $password = "1095chinemerem";
+    $username = "root";
+    $password = "";
     $dbname = "jubileeaid";
 
     $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-    $sql = "SELECT * FROM Admins WHERE username='$username'";
+    $sql = "SELECT * FROM admins WHERE username='$username'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {

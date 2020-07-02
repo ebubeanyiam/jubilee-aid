@@ -15,7 +15,7 @@
         <a href="./users/" class="nav-links"><i class="fa fa-users"></i><span>Users</span></a>
     </li>
     <li class="nav-items">
-        <a href="./withdraw/withdraw.php" class="nav-links"><i class="fa fa-compress"></i><span>Merge</span></a>
+        <a href="./merge" class="nav-links"><i class="fa fa-compress"></i><span>Merge</span></a>
     </li>
     <li class="nav-items">
         <a href="./delete/" class="nav-links"><i class="fa fa-trash"></i><span>Delete</span></a>
@@ -24,7 +24,7 @@
         <a href="./bonus/" class="nav-links"><i class="fa fa-money"></i><span>Bonus</span></a>
     </li>
     <li class="nav-items">
-        <form action="./components/logout.inc.php" method="POST">
+        <form action="../../pages/components/logout.inc.php" method="POST">
             <button type="submit" class="ctaSelect" name="logout"><i class="fa fa-sign-out"></i>
                 <span>Log Out</span></button>
         </form>
