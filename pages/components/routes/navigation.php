@@ -1,17 +1,17 @@
 <nav id="nav">
 
     <div class="logo">
-        <a href="./"><img src="./assets/images/logo.png" alt=""></a>
+        <a href="../../"><img src="../../assets/images/logo.png" alt=""></a>
     </div>
 
     <div class="mobile-nav">
         <div class="navigation">
             <ul class="navLinks">
                 <li><a href="#">About</a></li>
-                <li><a href="./user/plans/">Invest</a></li>
-                <li><a href="./user/withdraw/">Withdraw</a></li>
-                <li><a href="./pages/faq">FAQ</a></li>
-                <li><a href="./pages/privacy">Learn</a></li>
+                <li><a href="../../user/plans/">Grow</a></li>
+                <li><a href="../../user/withdraw/">Withdraw</a></li>
+                <li><a href="../faq/">FAQ</a></li>
+                <li><a href="../privacy/">Learn</a></li>
             </ul>
         </div>
 
