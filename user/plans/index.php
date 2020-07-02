@@ -14,7 +14,9 @@
 
     <?php
     $servername = "localhost";
-    $username = "root";
+    // $username = "anyiamebube";
+    // $password = "1095chinemerem";
+    $username = "";
     $password = "";
     $dbname = "jubileeaid";
 
@@ -24,15 +26,15 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $userId = $_SESSION["userId"];
     // $firstname = $_SESSION["firstname"];
     // $lastname = $_SESSION["lastname"];
     // $email = $_SESSION["email"];
     // $phonenumber = $_SESSION["phonenumber"];
 
     if (!isset($_SESSION['userId'])) {
-        require "../../pages/login/";
+        header("Location: ../../pages/login/");
     } else {
+        $userId = $_SESSION["userId"];
         echo '
     <nav class="menu-bar"> ';
         require "../components/nav.php";
@@ -90,10 +92,9 @@
                                 <option value="">Choose plan</option>
                                 <option value="5000">&#8358 5,000</option>
                                 <option value="10000">&#8358 10,000</option>
-                                <option value="15000">&#8358 15,000</option>
+                                <option value="20000">&#8358 15,000</option>
                                 <option value="50000">&#8358 50,000</option>
                                 <option value="100000">&#8358 100,000</option>
-                                <option value="500000">&#8358 500,000</option>
                             </select>
                             <br><br>
 
