@@ -15,7 +15,7 @@
         <a href="./users/" class="nav-links"><i class="fa fa-users"></i><span>Users</span></a>
     </li>
     <li class="nav-items">
-        <a href="./merge" class="nav-links"><i class="fa fa-compress"></i><span>Merge</span></a>
+        <a href="./merge/" class="nav-links"><i class="fa fa-compress"></i><span>Merge</span></a>
     </li>
     <li class="nav-items">
         <a href="./delete/" class="nav-links"><i class="fa fa-trash"></i><span>Delete</span></a>
