@@ -16,7 +16,7 @@
     $servername = "localhost";
     // $username = "anyiamebube";
     // $password = "1095chinemerem";
-    $username = "";
+    $username = "root";
     $password = "";
     $dbname = "jubileeaid";
 

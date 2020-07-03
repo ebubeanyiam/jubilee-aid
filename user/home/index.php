@@ -13,6 +13,21 @@
 <body>
 
     <?php
+    $servername = "localhost";
+    // $username = "anyiamebube";
+    // $password = "1095chinemerem";
+    $username = "root";
+    $password = "";
+    $dbname = "jubileeaid";
+
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $userId = $_SESSION['userId'];
+
     if (!isset($_SESSION['userId'])) {
         header("Location: ../../pages/login/");
     } else {
@@ -34,6 +49,18 @@
                     <p>Total Balance</p>
                     <span class="naira">&#8358</span><span> 0.00</span>
                 </div>
+
+                <div class="reg-warning">';
+        $sql = $sql = "SELECT id FROM accInfo WHERE userId='$userId'";
+        $result = $conn->query($sql);
+
+        if (!$result->num_rows > 0) {
+            echo '
+                            <p>Please confirm your account information to unlock your account.</p>
+                            <p>Click <a href="../profile/">here</a> to continue</p> ';
+        }
+        echo '
+                </div> 
 
                 <div class="action">
                     <h1>Actions</h1>

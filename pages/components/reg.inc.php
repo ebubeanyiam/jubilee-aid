@@ -4,6 +4,8 @@ if (isset($_POST['signup'])) {
     $servername = "localhost";
     $username = "root";
     $password = "";
+    // $username = "anyiamebube";
+    // $password = "1095chinemerem";
     $dbname = "jubileeaid";
 
     $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -29,7 +31,7 @@ if (isset($_POST['signup'])) {
 
         if ($conn->query($sql) === TRUE) {
             session_start();
-            $_SESSION["userId"] = $row["id"];
+            $_SESSION["userId"] = $row["userId"];
             $_SESSION["name"] = $row["firstname"];
             $_SESSION["lastname"] = $row["lastname"];
             $_SESSION["email"] = $row["email"];

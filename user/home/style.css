@@ -97,6 +97,21 @@ main .header {
   font-weight: bolder;
 }
 
+.reg-warning {
+  margin: 20px 0;
+}
+
+.reg-warning p:nth-child(1) {
+  color: #ff0000;
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+
+.reg-warning a {
+  font-weight: bolder;
+  color: #0000ff;
+}
+
 .action {
   margin: 50px 0 100px;
 }

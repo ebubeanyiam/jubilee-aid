@@ -5,7 +5,7 @@
 
 <ul class="nav-list">
     <li class="nav-items">
-        <section class="name"><a href="../profile/profile.php" class="nav-links">
+        <section class="name"><a href="../profile/" class="nav-links">
                 <?php echo $_SESSION["firstname"]; ?></a></section>
     </li>
     <li class="nav-items">
