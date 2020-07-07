@@ -54,22 +54,22 @@ main .header {
 }
 
 .main-landing {
-  padding: 20px 10px;
+  padding: 20px 30px;
   background: #fff;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+}
+
+@media screen and (max-width: 700px) {
+  .main-landing {
+    padding: 20px 10px;
+  }
 }
 
 .landing {
   height: 82vh;
   padding: 30px;
   overflow: auto;
-}
-
-@media screen and (max-width: 767px) {
-  .landing {
-    padding: 10px;
-  }
 }
 
 .landing h4 {
@@ -80,8 +80,60 @@ hr {
   border: 1px solid #e4e4e4;
 }
 
-.list {
-  margin-bottom: 70px;
+.confirm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.card {
+  margin: 10px 20px 10px 0;
+  width: 30%;
+}
+
+@media screen and (max-width: 1050px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .flex {
+    justify-content: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+.card-header {
+  color: #ffffff;
+  color: diamond;
+}
+
+select {
+  display: none;
+}
+
+.plan {
+  display: none;
+  width: 50%;
+}
+
+.pending {
+  margin: 50px 0;
+}
+
+.pending div p {
+  margin: 20px 0;
 }
 
 @media screen and (max-width: 1280px) {
