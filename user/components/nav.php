@@ -1,32 +1,31 @@
 <div class="logo">
-    <!-- <a href="../../index.php"><img src="../../assets/images/logo.png" alt=""></a> -->
     <i class="fa fa-times" style="font-size: 20px; cursor: pointer;"></i>
 </div>
 
 <ul class="nav-list">
     <li class="nav-items">
-        <section class="name"><a href="../profile/" class="nav-links">
-                <?php echo $_SESSION["firstname"]; ?></a></section>
+        <section class="name">
+            <h3 class=""><a href="../profile/" class="nav-links">Hi, <?php echo $_SESSION["firstname"]; ?></a></h3>
+        </section>
     </li>
     <li class="nav-items">
-        <a href="../home/" class="nav-links"><i class="fa fa-home"></i><span>Home</span></a>
+        <h6><a href="../home/" class="nav-links"><i class="fa fa-home"></i>Home</a></h6>
     </li>
     <li class="nav-items">
-        <a href="../plans/" class="nav-links"><i class="fa fa-credit-card-alt"></i><span>Plans</span></a>
+        <h6><a href="../plans/" class="nav-links"><i class="fa fa-credit-card-alt"></i>Plans</a></h6>
     </li>
     <li class="nav-items">
-        <a href="../withdraw/withdraw.php" class="nav-links"><i class="fa fa-history"></i><span>Withdraw</span></a>
+        <h6><a href="../withdraw/withdraw.php" class="nav-links"><i class="fa fa-history"></i>Withdraw</a></h6>
     </li>
     <li class="nav-items">
-        <a href="../refer/refer.php" class="nav-links"><i class="fa fa-gift"></i><span>Referral</span></a>
+        <h6><a href="../refer/refer.php" class="nav-links"><i class="fa fa-gift"></i>Referral</a></h6>
     </li>
     <li class="nav-items">
-        <a href="../payment/payment.php" class="nav-links"><i class="fa fa-money"></i><span>Payment</span></a>
+        <h6><a href="../payment/payment.php" class="nav-links"><i class="fa fa-money"></i>Payment</a></h6>
     </li>
     <li class="nav-items">
         <form action="../../pages/components/logout.inc.php" method="POST">
-            <button type="submit" class="ctaSelect" name="logout"><i class="fa fa-sign-out"></i>
-                <span>Log Out</span></button>
+            <button type="submit" class="btn btn-dark" name="logout"><i class="fa fa-sign-out"></i><span>Log Out</span></button>
         </form>
     </li>
 </ul>

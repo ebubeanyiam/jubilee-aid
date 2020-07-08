@@ -10,9 +10,9 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: "Montserrat", sans-serif;
-  background: rgba(179, 221, 255, 0.1);
+body {
+  overflow: hidden;
+  background: #062863;
 }
 
 a {
@@ -41,6 +41,7 @@ main .header {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: bolder;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 1280px) {
