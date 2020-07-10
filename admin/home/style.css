@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-@import url("./components/nav.css");
+@import url("../components/nav.css");
 
 *,
 *::before,
@@ -10,13 +10,9 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: "Montserrat", sans-serif;
-  background: rgba(179, 221, 255, 0.1);
-}
-
 body {
   overflow: hidden;
+  background: #062863;
 }
 
 a {
@@ -45,6 +41,7 @@ main .header {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: bolder;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 1280px) {
@@ -54,17 +51,6 @@ main .header {
 
   .header i {
     display: block;
-  }
-
-  .expand {
-    width: 250px;
-    background: #fff;
-    z-index: 1;
-    transition: 0.5s ease;
-  }
-
-  .opaque {
-    opacity: 0.6;
   }
 }
 
@@ -85,16 +71,6 @@ main .header {
   height: 90vh;
   padding: 30px;
   overflow: auto;
-}
-
-.balance p {
-  font-size: 14px;
-  margin-bottom: 25px;
-}
-
-.balance span {
-  font-size: 20px;
-  font-weight: bolder;
 }
 
 .action {
@@ -154,93 +130,4 @@ main .header {
 .cards div a {
   margin-bottom: 30px;
   color: white;
-}
-
-.data {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-@media screen and (max-width: 830px) {
-  .data {
-    flex-direction: column;
-  }
-}
-
-.data .s-i-s {
-  width: 60%;
-  padding: 20px;
-  border: 1px solid #e4e4e4;
-  border-radius: 4px;
-  margin-bottom: 20px;
-}
-
-@media screen and (max-width: 830px) {
-  .data .s-i-s {
-    width: 100%;
-  }
-}
-
-.data .s-i-s h4 {
-  font-size: 14px;
-  margin: 20px 0;
-}
-
-.data .s-i-s .align {
-  display: flex;
-  align-items: center;
-}
-
-.data .s-i-s .align div {
-  width: 50%;
-}
-
-.data .s-i-s footer a {
-  font-size: 12px;
-  margin: 10px;
-}
-
-.data .rate {
-  width: 35%;
-}
-
-@media screen and (max-width: 830px) {
-  .data .rate {
-    width: 70%;
-  }
-}
-
-.data .rate div {
-  border: 1px solid #e4e4e4;
-  border-radius: 4px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.data .rate div h4 {
-  font-size: 14px;
-  margin: 20px 0;
-}
-
-.data .rate div p {
-  margin: 20px;
-}
-
-.data .rate div span {
-  font-size: 13px;
-  margin: 0 20px;
-}
-
-hr {
-  border: 1px solid #e4e4e4;
-}
-
-@media screen and (max-width: 1280px) {
-  .open-nav {
-    width: 300px;
-    background: #ffffff;
-    z-index: 1;
-    padding: 20px;
-  }
 }

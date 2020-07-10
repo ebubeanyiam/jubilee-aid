@@ -16,45 +16,7 @@
     if (!isset($_SESSION['adminId'])) {
         header("Location: ./login");
     } else {
-        echo '  
-    <nav class="menu-bar"> ';
-        require "./components/nav.php";
-        echo '
-    </nav>
-
-    <main>
-        <div class="header">
-            <span><i class="fa fa-bars" style="font-size: 20px; cursor: pointer;"></i></span>
-            <h3>Account Overview</h3>
-        </div>
-
-        <div class="main-landing">
-            <div  class="landing">
-                <div class="balance">
-                    <p>Welcome ';
-        echo $_SESSION["username"];
-        echo '</p>
-                    <span class="naira">You\'re logged in as an admin.</span>
-                </div>
-
-                <div class="action">
-                    <h1>Actions</h1>
-                    <div class="cards">
-                        <div>
-                            <h3>View Users</h3>
-                            <a href="">Get Started</a>
-                        </div>
-                        <div>
-                            <h3>Merge Users</h3>
-                            <a href="">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main> 
-
-    <script src="./components/app.js"></script> ';
+        header("Location: ./home/");
     }
 
     ?>

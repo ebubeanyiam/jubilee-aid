@@ -19,7 +19,7 @@
   <div class="root">
     <header>
       <?php
-      require "..//components/routes/nav.php";
+      require "../components/routes/nav.php";
       ?>
 
       <div class="landing">

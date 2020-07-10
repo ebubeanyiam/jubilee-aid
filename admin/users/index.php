@@ -15,10 +15,10 @@
 <body>
     <?php
     $servername = "localhost";
-    // $username = "anyiamebube";
-    // $password = "1095chinemerem";
-    $username = "root";
-    $password = "";
+    $username = "anyiamebube";
+    $password = "1095chinemerem";
+    // $username = "root";
+    // $password = "";
     $dbname = "jubileeaid";
 
     $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -58,6 +58,10 @@
                                         <td>Name</td>
                                         <td>Email</td>
                                         <td>Phone Number</td>
+                                        <td>Total Pledges</td>
+                                        <td>Paid</td>
+                                        <td>Withdrawn</td>
+                                        <td>Net Worth</td>
                                     </tr>
                                 </thead>
                                 <?php
@@ -67,7 +71,12 @@
                                     $firstname = $row["firstname"];
                                     $lastname = $row["lastname"];
                                     $email = $row["email"];
-                                    $phonenumber = $row["phonenumber"]; ?>
+                                    $phonenumber = $row["phonenumber"];
+                                    $totalPledges = $row["totalPledges"];
+                                    $paid = $row["confirmedPayment"];
+                                    $withdrwan = $row["Withdrawal"];
+                                    $networth = $row["netWorth"];
+                                ?>
 
                                     <tbody>
                                         <tr>
@@ -75,6 +84,10 @@
                                             <td><?php echo $firstname . " " . $lastname ?></td>
                                             <td><?php echo $email ?></td>
                                             <td><?php echo $phonenumber ?></td>
+                                            <td><?php echo $totalPledges ?></td>
+                                            <td><?php echo $paid ?></td>
+                                            <td><?php echo $withdrwan ?></td>
+                                            <td><?php echo $networth ?></td>
                                         </tr>
                                     </tbody>
                                 <?php } ?>

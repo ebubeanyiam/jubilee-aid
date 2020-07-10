@@ -4,6 +4,8 @@ if (isset($_POST['submit'])) {
     $servername = "localhost";
     $username = "root";
     $password = "";
+    // $username = "anyiamebube";
+    // $password = "1095chinemerem";
     $dbname = "jubileeaid";
 
     $conn = mysqli_connect($servername, $username, $password, $dbname);

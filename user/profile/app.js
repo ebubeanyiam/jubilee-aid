@@ -2,7 +2,7 @@ var acc = document.querySelector(".account-button");
 var sec = document.querySelector(".security-button");
 var accDiv = document.querySelector(".account");
 var secDiv = document.querySelector(".security");
-const submit = document.querySelector(".submit");
+const submit = document.querySelector(".btn-primary");
 
 sec.addEventListener("click", () => {
   acc.classList.remove("active");

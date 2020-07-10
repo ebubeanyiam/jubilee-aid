@@ -1,113 +1,90 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-@import url('../components/nav.css');
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("../components/nav.css");
 
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html {
-    font-family: 'Montserrat', sans-serif;
-    background: rgba(179, 221, 255, 0.1);
+body {
+  overflow: hidden;
+  background: #062863;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 main {
-    margin-left: 15%;
+  margin-left: 15%;
 }
 
 main .header {
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding: 15px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 15px 0;
 }
 
 .header i {
-    display: none;
-    margin-left: 30px;
+  display: none;
+  margin-left: 30px;
 }
 
 .header h3 {
-    width: 90%;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: bolder;
+  width: 90%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bolder;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 1280px) {
-    main {
-        margin-left: 0;
-    }
+  main {
+    margin-left: 0;
+  }
 
-    .header i {
-        display: block;
-    }
-
-    .expand {
-        width: 250px;
-        background: #fff;
-        z-index: 1;
-        transition: 0.5s ease;
-    }
-
-    .opaque {
-        opacity: 0.6;
-    }
-    
+  .header i {
+    display: block;
+  }
 }
 
 .main-landing {
-    padding: 20px 30px;
-    background: #fff;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, .1);
-    border-radius: 5px;
+  padding: 20px 30px;
+  background: #fff;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 .landing {
-    height: 82vh;
-    padding: 30px;
-    overflow: auto;
+  height: 82vh;
+  padding: 30px;
+  overflow: auto;
+  position: relative;
 }
 
 .landing h4 {
-    margin: 0 0 10px;
+  margin: 0 0 10px;
 }
 
 hr {
-    border: 1px solid #e4e4e4;
+  border: 1px solid #e4e4e4;
 }
 
-.list, .merge {
-    margin-bottom: 70px;
+.list,
+.merge {
+  margin-bottom: 70px;
 }
 
 .merge form {
-    margin: 20px 0 0;
+  margin: 20px 0 0;
 }
 
 .merge form input {
-    padding: 10px;
-    border: 1px solid #e4e4e4;
-    width: 20%;
-    border-radius: 4px;
-    font-family: 'Montserrat';
-}
-
-.merge form input[type="submit"] {
-    padding: 10px;
-    background: #9494f8;
-    border: 1px solid #9494f8;
-    border-radius: 4px;
-    color: white;
-    font-family: 'Montserrat';
-    cursor: pointer;
-    display: block;
-    margin: 10px 0;
+  width: 300px;
 }
