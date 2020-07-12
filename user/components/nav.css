@@ -17,6 +17,11 @@
   display: none;
 }
 
+.fa-bars,
+.fa-times {
+  color: #ffffff;
+}
+
 .nav-list {
   width: 100%;
   height: 70%;

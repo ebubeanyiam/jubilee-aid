@@ -15,10 +15,10 @@
 <body>
   <?php
   $servername = "localhost";
-  // $username = "anyiamebube";
-  // $password = "1095chinemerem";
-  $username = "root";
-  $password = "";
+  $username = "anyiamebube";
+  $password = "1095chinemerem";
+  // $username = "root";
+  // $password = "";
   $dbname = "jubileeaid";
 
   $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -60,7 +60,7 @@
           <?php } else { ?>
 
             <?php
-            $sql = "SELECT amount, reg_date FROM Payment WHERE userId='$userId'";
+            $sql = "SELECT amount, reg_date FROM payment WHERE userId='$userId'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -101,7 +101,7 @@
                 $amount = mysqli_real_escape_string($conn, $_POST['amount']);
                 $plan = mysqli_real_escape_string($conn, $_POST['plan']);
 
-                $sql = "INSERT INTO Payment (userId, amount) VALUES ('$userId', '$amount')";
+                $sql = "INSERT INTO payment (userId, amount) VALUES ('$userId', '$amount')";
                 if ($conn->query($sql) === TRUE) {
                   if ($plan === "Basic") {
                     $update = "UPDATE users SET Basic=Basic + 1, totalPledges=totalPledges + 1 WHERE userId='$userId'";
@@ -113,17 +113,20 @@
                     if (mysqli_query($conn, $update)) {
                       header("Location: ../plans/");
                     }
-                  } else if ($plan === "Silver") {
+                  }
+                  else if ($plan === "Silver") {
                     $update = "UPDATE users SET Silver=Silver + 1, totalPledges=totalPledges + 1 WHERE userId='$userId'";
                     if (mysqli_query($conn, $update)) {
                       header("Location: ../plans/");
                     }
-                  } else if ($plan === "Gold") {
+                  }
+                  else if ($plan === "Gold") {
                     $update = "UPDATE users SET Gold=Gold + 1, totalPledges=totalPledges + 1 WHERE userId='$userId'";
                     if (mysqli_query($conn, $update)) {
                       header("Location: ../plans/");
                     }
-                  } else if ($plan === "Platinum") {
+                  }
+                  else if ($plan === "Platinum") {
                     $update = "UPDATE users SET Platinum=Platinum + 1, totalPledges=totalPledges + 1 WHERE userId='$userId'";
                     if (mysqli_query($conn, $update)) {
                       header("Location: ../plans/");

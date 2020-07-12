@@ -15,13 +15,13 @@
         <h6><a href="../plans/" class="nav-links"><i class="fa fa-credit-card-alt"></i>Plans</a></h6>
     </li>
     <li class="nav-items">
-        <h6><a href="../withdraw/withdraw.php" class="nav-links"><i class="fa fa-history"></i>Withdraw</a></h6>
+        <h6><a href="../withdraw/index.php" class="nav-links"><i class="fa fa-history"></i>Withdraw</a></h6>
     </li>
     <li class="nav-items">
         <h6><a href="../refer/refer.php" class="nav-links"><i class="fa fa-gift"></i>Referral</a></h6>
     </li>
     <li class="nav-items">
-        <h6><a href="../payment/payment.php" class="nav-links"><i class="fa fa-money"></i>Payment</a></h6>
+        <h6><a href="../payment/" class="nav-links"><i class="fa fa-money"></i>Payment</a></h6>
     </li>
     <li class="nav-items">
         <form action="../../pages/components/logout.inc.php" method="POST">
