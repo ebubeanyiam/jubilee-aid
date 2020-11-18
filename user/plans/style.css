@@ -136,12 +136,3 @@ select {
 .pending div p {
   margin: 20px 0;
 }
-
-@media screen and (max-width: 1280px) {
-  .open-nav {
-    width: 300px;
-    background: #ffffff;
-    z-index: 1;
-    padding: 20px;
-  }
-}

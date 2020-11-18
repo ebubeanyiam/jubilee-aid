@@ -41,6 +41,8 @@
           <input type="email" name="email" id="email" placeholder="Email address" required>
           <span class="mail-warning">Please input a valid Email</span>
 
+          <input type="text" name="referralId" id="referralId" placeholder="Referral Id">
+
           <span class="password">
             <input type="password" name="password" id="password" placeholder="Password" required>
             <i class="fa fa-eye"></i>

@@ -15,10 +15,10 @@
 <body>
   <?php
   $servername = "localhost";
-  $username = "anyiamebube";
-  $password = "1095chinemerem";
-  // $username = "root";
-  // $password = "";
+  // $username = "anyiamebube";
+  // $password = "1095chinemerem";
+  $username = "root";
+  $password = "";
   $dbname = "jubileeaid";
 
   $conn = mysqli_connect($servername, $username, $password, $dbname);

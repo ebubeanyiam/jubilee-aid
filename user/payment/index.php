@@ -61,7 +61,7 @@
           <hr>
           <div class="list">
             <div>
-              <p>The names and phone number of users you're merged with will appear below</p>
+              <p>Details of users you're merged with will appear below</p>
               <?php
               if ($result->num_rows > 0) {
                 // output data of each row
@@ -140,9 +140,12 @@
                                 }
                               }
                             }
-                          } else {
-                            echo "Nothing is here";
-                          }
+                          } else { ?>
+                  <div class="alert alert-warning">
+                    It seems you haven't been merged yet. <br>
+                    When you do, they'll appear here.
+                  </div>
+                  <?php }
                         } else if ($sql_result->num_rows > 0) {
                           if ($_result->num_rows > 0) {
                             while ($row = $_result->fetch_assoc()) {
@@ -205,7 +208,7 @@
                                       }
                                     }
 
-                                      ?>
+                  ?>
 
                           <div class="alert alert-success">
                             Request Sent, Awaiting Confirmation <br />
@@ -243,9 +246,12 @@
                                 }
                               }
                             }
-                          } else {
-                            echo "Nothing is here";
-                          }
+                          } else { ?>
+                  <div class="alert alert-warning">
+                    It seems you haven't been merged yet. <br>
+                    When you do, they'll appear here.
+                  </div>
+            <?php }
                         }
                         echo '
                     </div>
@@ -258,7 +264,7 @@
     <script src="../components/app.js"></script> ';
                       }
                       $conn->close();
-                                  ?>
+            ?>
 </body>
 
 </html>
