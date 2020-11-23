@@ -14,7 +14,7 @@
 <body>
   <?php
 
-  if (isset($_POST["delete"])) {
+  if (isset($_POST["merge"])) {
 
     $servername = "localhost";
     // $username = "root";
@@ -28,18 +28,30 @@
     if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
     }
-    $userid = mysqli_real_escape_string($conn, $_POST['userId']);
-    $sql = "DELETE FROM users WHERE userid='$userid'";
+    $payeename = mysqli_real_escape_string($conn, $_POST['payeename']);
+    $payeeId = mysqli_real_escape_string($conn, $_POST['payeeId']);
+    $amount = mysqli_real_escape_string($conn, $_POST['amount']);
+    $payername = mysqli_real_escape_string($conn, $_POST['payername']);
+    $payerId = mysqli_real_escape_string($conn, $_POST['payerId']);
 
-    if (mysqli_query($conn, $sql)) { ?>
+    $sql = "INSERT INTO merged (withdrawer, withdrawerId) VALUES ('$payeename', '$payeeId')";
+    $my_sql = "UPDATE Withdraw SET merged= merged + '$amount' WHERE userId='$payeeId'";
+    $sql_ = "UPDATE merged SET payer='$payername',  payerId='$payerId', amount='$amount' WHERE withdrawerId='$payeeId'";
+    $sql__ = "UPDATE Payment SET merged= merged + '$amount' WHERE userId='$payerId'";
+
+    if (mysqli_query($conn, $sql) && mysqli_query($conn, $my_sql) && mysqli_query($conn, $sql_) && mysqli_query($conn, $sql__)) { ?>
       <div class="alert alert-success">
-        Record deleted succesfully
+        Users Merged succesfully
+
+        <a href="../home"><button class="btn btn-primary">Back to home</button></a>
       </div>
     <?php } else { ?>
       <div class="alert alert-warning">
         Oops, seems an error occured. Please try again or contact your developer
       </div>
   <?php }
+  } else {
+    echo "Nothing found";
   } ?>
 
   <script src="../components/app.js"></script>

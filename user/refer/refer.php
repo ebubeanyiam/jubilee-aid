@@ -29,7 +29,6 @@
   }
 
   $userId = $_SESSION['userId'];
-  $referralId;
 
   if (!isset($_SESSION['userId'])) {
     header("Location: ../../pages/login/");
@@ -63,15 +62,18 @@
                 <hr>
                 <div class="palette-body">
                   <?php
-                  $query = "SELECT * FROM Users WHERE userId='$userId'";
+                  $query = "SELECT * FROM users WHERE userId='$userId'";
                   $result = $conn->query($query);
 
                   if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                      $referralId = $row["referralId"];
-                    }
+                      $referralId = $row["referralId"]; ?>
+
+                      <h1 class="referral"><?php echo $referralId; ?></h1>
+                      <span class="copy-text" onclick="copyFunction()" style="cursor: pointer">Copy</span>
+
+                  <?php }
                   } ?>
-                  <h1><?php echo $referralId; ?></h1>
                 </div>
               </div>
             </div>
@@ -82,6 +84,7 @@
 
 
     <script src="../components/app.js"></script>
+    <script src="app.js"></script>
 
   <?php } ?>
 

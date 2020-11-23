@@ -16,10 +16,10 @@
 
   <?php
   $servername = "localhost";
-  $username = "anyiamebube";
-  $password = "1095chinemerem";
-  // $username = "root";
-  // $password = "";
+  // $username = "anyiamebube";
+  // $password = "1095chinemerem";
+  $username = "root";
+  $password = "";
   $dbname = "jubileeaid";
 
   $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -97,12 +97,12 @@
                 <ul style="list-style: none;">
                   <li>
                     <h4>Investments</h4>
-                    <p><?php echo '&#8358;' . $investment . '.00'; ?></p>
+                    <p><?php echo '&#8358;' . " " . $investment . '.00'; ?></p>
                   </li>
 
                   <li>
                     <h4>Withdrawals</h4>
-                    <p><?php echo '&#8358;' . $withdrawal . '.00'; ?></p>
+                    <p><?php echo '&#8358;' . " " . $withdrawal . '.00'; ?></p>
                   </li>
                 </ul>
               </div>

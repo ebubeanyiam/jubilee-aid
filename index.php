@@ -33,7 +33,7 @@
         <p>
           Jubilee aid helps you achieve financial freedom by enabling you save responsibly and invest on the go.
           <br /> <br />
-          Earn over 25% return on investments.
+          Earn over 50% return on investments.
         </p>
 
         <a href="./pages/login"><button>Get Started</button></a>

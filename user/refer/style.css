@@ -81,11 +81,6 @@ main .header {
   margin: 50px 0 100px;
 }
 
-.cards {
-  display: flex;
-  align-content: center;
-}
-
 .cards .palette {
   height: 200px;
   border: 1px solid #e4e4e4;
@@ -95,18 +90,12 @@ main .header {
   flex-direction: column;
   padding: 0 20px;
   transition: transform 0.5s ease;
+  width: 300px;
+  border: 1px solid green;
 }
 
 .cards .palette:hover {
   transform: scale(1.02);
-}
-
-.cards .palette:nth-child(1) {
-  width: 30%;
-}
-
-.cards .palette:nth-child(2) {
-  width: 70%;
 }
 
 .palette .palette-head {
@@ -120,73 +109,50 @@ main .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .palette-body h1 {
   text-align: center;
 }
-.palette-body p {
-  font-size: 14px;
-  margin-top: 5px;
-}
 
-.data {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.data .s-i-s {
-  width: 60%;
-  padding: 20px;
-  border: 1px solid #e4e4e4;
-  border-radius: 4px;
-}
-
-.data .s-i-s h4 {
-  font-size: 14px;
-  margin: 20px 0;
-}
-
-.data .s-i-s .align {
-  display: flex;
-  align-items: center;
-}
-
-.data .s-i-s .align div {
-  width: 50%;
-}
-
-.data .s-i-s footer a {
-  font-size: 12px;
-  margin: 10px;
-}
-
-.data .rate {
-  width: 35%;
-}
-
-.data .rate div {
-  border: 1px solid #e4e4e4;
-  border-radius: 4px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.data .rate div h4 {
-  font-size: 14px;
-  margin: 20px 0;
-}
-
-.data .rate div p {
-  margin: 20px;
-}
-
-.data .rate div span {
+.palette-body span {
+  position: absolute;
+  top: 0px;
+  right: 10px;
   font-size: 13px;
-  margin: 0 20px;
+  font-weight: bolder;
 }
 
 hr {
   border: 1px solid #e4e4e4;
+}
+
+@media screen and (max-width: 400px) {
+  .main-landing,
+  .landing {
+    padding: 20px 10px;
+  }
+  .cards .palette {
+    width: 95%;
+  }
+
+  .palette-body h1 {
+    font-size: 20px;
+  }
+
+  .palette .palette-head {
+    display: unset;
+    padding-bottom: 5px;
+  }
+
+  .palette .palette-head h1 {
+    display: unset;
+    margin-bottom: 10px;
+  }
+
+  .palette .palette-head a {
+    display: unset;
+    margin-right: 10px;
+  }
 }
